@@ -41,9 +41,10 @@ def main():
         lis=[]
         for i in range(6):
             lis.append(model[i].predict_proba(v.transform([text]))[:, 1])
-
+        list=['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
         st.header('Output')
         for i in range(6):
+            st.subheader(list[i])
             st.write(lis[i])
         st.write('---')
     
@@ -52,6 +53,8 @@ def main():
         st.title('Prepared by:-')
         st.header('SAURAV BORAH')
         st.subheader('Machine Learning Intern, Technocolab')
+        st.subheader('Source Code:-')
+        st.write('https://github.com/SAURAVBORAH22/toxic-comment-classifier')
 
 
 
@@ -59,6 +62,3 @@ def main():
             
 if __name__ == '__main__':
     main()
-
-
-
