@@ -3,6 +3,8 @@ import pandas as pd
 from PIL import Image
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
+import pickle
+import numpy as np
 def main():
     activities=['About','Toxic Comment Classification System','Developer']
     option=st.sidebar.selectbox('Menu Bar:',activities)
